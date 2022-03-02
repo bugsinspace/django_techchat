@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <form class="form" method="POST" action="">
+        {% csrf_token %}
+            <p>Once you delete your account, there is no going back. Please be certain.</p>
+            <button class="btn btn--main" type="submit">Confirm</button>
+            <a class="btn btn--dark" href="{% url 'home' %}">Cancel</a>
+    </form>
+
+{% endblock%}
